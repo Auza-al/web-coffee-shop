@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z.Cafe | Premium Coffee Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+<body>
+
+<header class="header">
+    <a href="#home" class="logo">Z.Cafe</a>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#team">Team</a>
+        <a href="#review">Reviews</a>
+    </nav>
+    <div class="icons">
+        <div class="fas fa-user" id="user-btn"></div>
+        
+        <div id="cart-btn" style="position: relative; display: inline-block;">
+            <i class="fas fa-shopping-bag"></i>
+            <span id="cart-count">0</span>
+            
+            <div class="cart-items-container">
+                <h3>Keranjang Anda</h3>
+                <div id="cart-list">
+                    <p class="empty-msg">Belum ada pesanan</p>
+                </div>
+                <div class="cart-total-box">
+                    <span>Total Harga:</span>
+                    <span>$ <span id="total-price">0</span></span>
+                </div>
+                <button class="btn-checkout">Checkout</button>
+            </div>
+        </div>
+        
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+</header>
+
+<section class="home" id="home">
+    <div class="content" data-aos="fade-right">
+        <h3>Enjoy a new blend <br> of coffee beans</h3>
+        <p>Brew or order a Perfect Coffee based on <br> your mood Anywhere Anytime</p>
+        <a href="#products" class="btn-shop">SHOP NOW <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="image" data-aos="zoom-in">
+        <img src="c:\Users\LENOVO\Downloads\diffcoffee1.webp" alt="Hero">
+    </div>
+</section>
+
+<section class="services" id="services">
+    <h1 class="heading">Blending culture, coffee & top <br> notch services</h1>
+    <div class="box-container">
+        <div class="box" data-aos="fade-up"><i class="fas fa-blender"></i><span>Equipment</span></div>
+        <div class="box" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-coffee"></i><span>Type of Coffee</span></div>
+        <div class="box" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-wine-glass"></i><span>Take Away</span></div>
+        <div class="box" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-seedling"></i><span>Beans Variant</span></div>
+        <div class="box" data-aos="fade-up" data-aos-delay="400"><i class="fas fa-bread-slice"></i><span>Pastry</span></div>
+    </div>
+</section>
+
+<section class="products" id="products">
+    <h1 class="heading">Our Top Selling Products</h1>
+    <div class="box-container">
+        <div class="box" data-name="Instant Coffee" data-price="14">
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=500" alt="">
+                <i class="far fa-heart heart-icon"></i>
+            </div>
+            <div class="content">
+                <span class="tag">4 Types Available</span>
+                <h3>Instant Coffee</h3>
+                <div class="price-row">
+                    <span>$14</span>
+                    <button class="cart-circle add-to-cart"><i class="fas fa-shopping-bag"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-name="Black Coffee" data-price="12">
+            <div class="image-card">
+                <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?q=80&w=500" alt="">
+                <i class="far fa-heart heart-icon"></i>
+            </div>
+            <div class="content">
+                <span class="tag">2 Types Available</span>
+                <h3>Black Coffee</h3>
+                <div class="price-row">
+                    <span>$12</span>
+                    <button class="cart-circle add-to-cart"><i class="fas fa-shopping-bag"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="team" id="team">
+    <h1 class="heading" data-aos="fade-up">Meet Our Experts</h1>
+    
+    <div class="swiper team-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+                <div class="team-img-container">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400" alt="Owner">
+                </div>
+                <h3>Alex Brew</h3>
+                <span class="role">Owner & Founder</span>
+                <p>Visionary behind Q.Cafe with 15 years of coffee industry experience.</p>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="team-img-container">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400" alt="Co-Lead">
+                </div>
+                <h3>Sara Zones</h3>
+                <span class="role">Co-Lead Chef</span>
+                <p>Expert in flavor profiling and bean roasting techniques.</p>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="team-img-container">
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?q=80&w=400" alt="Barista">
+                </div>
+                <h3>David Lee</h3>
+                <span class="role">Senior Barista</span>
+                <p>Specialist in latte art and manual brew methods.</p>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="team-img-container">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400" alt="Barista">
+                </div>
+                <h3>Mia Wong</h3>
+                <span class="role">Barista</span>
+                <p>Passionate about creating the perfect espresso shot.</p>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="team-img-container">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=400" alt="Barista">
+                </div>
+                <h3>James Bond</h3>
+                <span class="role">Barista</span>
+                <p>Dedication to customer service and coffee consistency.</p>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<section class="review" id="review">
+    <h1 class="heading">Customer's Reviews</h1>
+
+    <div class="swiper review-slider">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide review-box">
+                <div class="rev-user-img">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200" alt="">
+                </div>
+                <h3>Eden Blue</h3>
+                <div class="main-quote">The taste of coffee is Stunning, <br> subtle and smooth flavor.</div>
+                <p class="desc">The taste of coffee can vary depending on the type of bean, roast level, and brewing method used. Some people prefer a strong and bold taste.</p>
+            </div>
+
+            <div class="swiper-slide review-box">
+                <div class="rev-user-img">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200" alt="">
+                </div>
+                <h3>Sarah Jenkins</h3>
+                <div class="main-quote">"Best espresso in town, <br> very aromatic and fresh."</div>
+                <p class="desc">I've tried many coffee shops, but Q.Cafe has a unique way of roasting their beans that makes all the difference.</p>
+            </div>
+
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<section class="booking">
+    <div class="booking-card" data-aos="zoom-in">
+        <h2>Let's book a Table <br> For you</h2>
+        <div class="input-group">
+            <div class="input-item"><i class="fas fa-phone"></i><input type="text" placeholder="Your Number"></div>
+            <div class="input-item"><i class="fas fa-user"></i><input type="text" placeholder="People"></div>
+            <button class="btn-book">Book Table</button>
+        </div>
+        <p>We will contact you to confirm your booking</p>
+    </div>
+</section>
+
+<section class="about" id="about">
+    <div class="image" data-aos="fade-right">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=800" alt="Our Story">
+    </div>
+    <div class="content" data-aos="fade-left">
+        <h1 class="heading" style="text-align: left;">Every Cup Has A Story</h1>
+        <p>Sejak tahun 2020, kami berdedikasi untuk menghadirkan biji kopi pilihan terbaik dari petani lokal. Kami percaya bahwa kopi bukan sekadar minuman, melainkan sebuah jembatan budaya dan inspirasi.</p>
+        <p>Dengan teknik pemanggangan yang presisi dan pelayanan sepenuh hati, kami mengundang Anda untuk merasakan pengalaman minum kopi yang tak terlupakan.</p>
+        <a href="#products" class="btn-shop">Learn More <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="box-container">
+        <div class="box">
+            <a href="#" class="logo">Z.Cafe</a>
+            <p>Blending culture, coffee & top notch services. Nikmati setiap tetes inspirasi di setiap cangkir kami.</p>
+            <div class="share">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-linkedin"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Contact Info</h3>
+            <a href="#" class="links"> <i class="fas fa-phone"></i> +62-812-3456-789 </a>
+            <a href="#" class="links"> <i class="fas fa-envelope"></i> hello@qcafe.com </a>
+            <a href="#" class="links"> <i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia </a>
+        </div>
+
+        <div class="box">
+            <h3>Quick Links</h3>
+            <a href="#home" class="links"> <i class="fas fa-arrow-right"></i> Home </a>
+            <a href="#products" class="links"> <i class="fas fa-arrow-right"></i> Products </a>
+            <a href="#services" class="links"> <i class="fas fa-arrow-right"></i> Services </a>
+            <a href="#review" class="links"> <i class="fas fa-arrow-right"></i> Review </a>
+        </div>
+
+        <div class="box">
+            <h3>Opening Hours</h3>
+            <p> Monday - Friday : <span> 08:00am - 10:00pm </span> </p>
+            <p> Saturday - Sunday : <span> 09:00am - 11:00pm </span> </p>
+        </div>
+    </div>
+    <div class="credit"> Created by <span>zamuts</span> | All Rights Reserved 2026 </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

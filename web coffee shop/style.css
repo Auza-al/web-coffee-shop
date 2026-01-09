@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg: #f3eee9;
+    --dark: #121212;
+    --accent: #d3ad7f;
+    --orange: #e67e22;
+    --card-bg: #ece4dd;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+}
+
+body { 
+    background: var(--bg); 
+    color: var(--dark); 
+    overflow-x: hidden; 
+}
+
+section { padding: 8rem 9%; }
+
+.heading { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 4rem; 
+    text-align: center; 
+    margin-bottom: 2rem; 
+    line-height: 1.2; 
+}
+
+.sub-heading { 
+    text-align: center; 
+    font-size: 1.4rem; 
+    color: #777; 
+    max-width: 60rem; 
+    margin: 0 auto 5rem; 
+}
+
+/* --- HEADER --- */
+.header {
+    position: fixed; top: 2rem; left: 50%; transform: translateX(-50%);
+    width: 90%; background: var(--dark);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.2rem 4rem; border-radius: 5rem; z-index: 1000;
+}
+
+.header .logo { font-family: 'Playfair Display', serif; font-size: 2.5rem; color: var(--accent); }
+
+.header .navbar a { font-size: 1.4rem; color: #bbb; margin: 0 1.5rem; font-weight: 500; }
+.header .navbar a:hover { color: var(--white); }
+
+.header .icons div { color: var(--white); font-size: 2rem; margin-left: 2rem; cursor: pointer; }
+.header .icons div:hover { color: var(--accent); }
+
+/* --- HOME --- */
+.home { min-height: 100vh; display: flex; align-items: center; flex-wrap: wrap; gap: 2rem; }
+.home .content { flex: 1 1 45rem; }
+.home .content h3 { font-family: 'Playfair Display', serif; font-size: 6.5rem; color: var(--dark); line-height: 1.1; }
+.home .content p { font-size: 1.6rem; color: #666; margin: 2rem 0; }
+.home .image { flex: 1 1 45rem; text-align: center; }
+.home .image img { width: 100%; max-width: 50rem; border-radius: 3rem; }
+
+.btn-shop {
+    display: inline-flex; align-items: center; background: var(--dark); color: var(--white);
+    padding: 1.2rem 3rem; border-radius: 5rem; font-size: 1.5rem; font-weight: 600;
+}
+.btn-shop i { background: var(--orange); padding: 0.8rem; border-radius: 50%; margin-left: 1.5rem; font-size: 1.2rem; }
+
+/* --- SERVICES --- */
+.services .box-container { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; }
+.services .box {
+    background: #4e342e; color: var(--white); padding: 4rem 2rem; border-radius: 3rem;
+    text-align: center; width: 18rem; cursor: pointer;
+}
+.services .box:hover { transform: translateY(-10px); background: var(--dark); }
+.services .box i { font-size: 4rem; color: var(--accent); margin-bottom: 1.5rem; display: block; }
+.services .box span { font-size: 1.4rem; font-weight: 500; }
+
+/* --- PRODUCTS --- */
+/* --- PRODUCTS SECTION --- */
+.products .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+    gap: 3rem;
+}
+
+.products .box {
+    background: #ece4dd;
+    padding: 2.5rem;
+    border-radius: 4rem;
+    transition: transform 0.3s ease;
+}
+
+.products .box:hover {
+    transform: translateY(-1rem);
+}
+
+.image-card {
+    background: #dcd3cc;
+    border-radius: 3rem;
+    height: 25rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-card img {
+    height: 80%;
+    width: 90%;
+    object-fit: cover;
+    border-radius: 2.5rem;
+}
+
+/* Icon Love */
+.heart-icon {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    color: var(--orange);
+    font-size: 2.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* KETIKA LOVE DIKLIK */
+.heart-icon.active {
+    color: #e74c3c !important; /* Merah */
+}
+
+.products .content {
+    padding-top: 2rem;
+}
+
+.products .tag {
+    display: inline-block;
+    background: var(--white);
+    padding: 0.6rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+
+.products h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--dark);
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.price-row span {
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+/* Tombol Keranjang */
+.cart-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--orange);
+    color: var(--white);
+    text-decoration: none;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    transition: 0.3s;
+}
+
+.cart-circle:hover {
+    background: var(--dark);
+    transform: scale(1.1);
+}
+
+/* Badge Angka di Ikon Header */
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #d1752a;
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Box Keranjang yang Muncul saat Diklik */
+.cart-items-container {
+    position: absolute;
+    top: 130%; right: 0;
+    width: 32rem;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.1);
+    display: none; /* Default sembunyi */
+    color: #333;
+    z-index: 1000;
+}
+
+/* Aktifkan saat ikon diklik */
+.cart-items-container.active {
+    display: block;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item h4 { font-size: 1.5rem; }
+.cart-total { 
+    margin-top: 2rem; 
+    font-size: 1.8rem; 
+    font-weight: bold; 
+    text-align: right;
+}
+
+/* Badge Angka */
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #d1752a;
+    color: white;
+    font-size: 1rem;
+    padding: 2px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Container Dropdown */
+.cart-items-container {
+    position: absolute;
+    top: 150%; 
+    right: 0;
+    width: 32rem;
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.2);
+    display: none; /* Sembunyi default */
+    z-index: 10000; /* Pastikan di atas elemen lain */
+}
+
+/* Munculkan saat active */
+.cart-items-container.active {
+    display: block;
+}
+
+/* Style Item di Dalam Keranjang */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item h4 { font-size: 1.4rem; color: #333; }
+.cart-item span { font-size: 1.4rem; color: #d1752a; font-weight: bold; }
+
+.cart-total-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    border-top: 2px solid #eee;
+    padding-top: 1rem;
+}
+
+.btn-checkout {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #333;
+    color: #fff;
+    border-radius: 0.8rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+
+/* --- TEAM (SLIDER VERSION) --- */
+.team .team-slider {
+    padding-bottom: 7rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.team .box {
+    background: #fdfaf7;
+    padding: 2.5rem;
+    border-radius: 2.5rem;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+    cursor: grab;
+    /* Memastikan tinggi kotak konten selalu sama */
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+
+.team-img-container {
+    width: 100%;
+    height: 28rem; /* Tinggi kotak foto yang seragam */
+    overflow: hidden;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+    flex-shrink: 0; /* Mencegah foto menciut */
+}
+
+.team-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ini penting agar foto tidak gepeng/ketarik */
+    object-position: center;
+}
+
+.team .box h3 {
+    font-size: 2.2rem;
+    font-family: 'Playfair Display', serif;
+    color: var(--dark);
+    margin-top: auto; /* Mendorong teks ke posisi yang sejajar */
+}
+
+/* --- FIX PAGINATION WARNA BIRU --- */
+/* Targetkan secara spesifik agar tidak ada lagi warna biru default */
+
+.team-slider .swiper-pagination-bullet,
+.review-slider .swiper-pagination-bullet {
+    background: #ccc !important;
+    opacity: 1 !important;
+    width: 1rem !important;
+    height: 1rem !important;
+}
+
+.team-slider .swiper-pagination-bullet-active,
+.review-slider .swiper-pagination-bullet-active {
+    background: var(--orange) !important;
+    width: 3rem !important; /* Bentuk kapsul sesuai gambar no 4 */
+    border-radius: 1rem !important;
+}
+
+.team .box {
+    background: #fdfaf7;
+    padding: 2.5rem;
+    border-radius: 2.5rem;
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+    cursor: grab;
+}
+
+/* --- FIX: MENAMPILKAN ICON SLIDER (PAGINATION) --- */
+
+/* 1. Mengatur titik dasar (semua slider) */
+.swiper-pagination-bullet {
+    width: 1rem !important;
+    height: 1rem !important;
+    background: #ccc !important; /* Warna abu-abu saat tidak aktif */
+    opacity: 1 !important;
+    margin: 0 5px !important;
+}
+
+/* 2. Mengatur titik aktif menjadi ORANYE dan MEMANJANG */
+/* Kita gabungkan selector Team dan Review di sini */
+.team-slider .swiper-pagination-bullet-active,
+.review-slider .swiper-pagination-bullet-active {
+    background: var(--orange) !important;
+    width: 3rem !important; /* Membuat bentuk kapsul */
+    border-radius: 1rem !important;
+    transition: width 0.3s ease;
+}
+
+/* 3. Memastikan posisi pagination berada di bawah kartu */
+.swiper-pagination {
+    position: relative !important; /* Mengubah dari absolute ke relative agar tidak menumpuk */
+    bottom: 0 !important;
+    margin-top: 2rem !important;
+}
+
+/* REVIEW SECTION */
+/* --- REVIEW SECTION REPAIR --- */
+.review {
+    text-align: center;
+}
+
+.review .review-slider {
+    padding-bottom: 7rem;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+/* Memaksa semua konten slide ke tengah */
+.review .review-box {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+    background: transparent;
+    user-select: none;
+}
+
+.review .rev-user-img {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 2rem auto; /* Margin auto kiri kanan untuk center */
+    border: 0.5rem solid var(--white);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+}
+
+.review .rev-user-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.review .review-box h3 {
+    font-size: 2rem;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.review .main-quote {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: var(--dark);
+    font-weight: 700;
+    margin-bottom: 2rem;
+    max-width: 80rem;
+}
+
+.review .desc {
+    font-size: 1.6rem;
+    color: #777;
+    line-height: 1.8;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+/* Memperbaiki Pagination (Dots) */
+.review .swiper-pagination {
+    bottom: 1rem !important;
+    position: relative; /* Supaya tidak menumpuk di atas konten */
+    margin-top: 3rem;
+}
+
+.review .swiper-pagination-bullet {
+    background: #ccc !important;
+    opacity: 1 !important;
+    width: 1rem;
+    height: 1rem;
+}
+
+.review .swiper-pagination-bullet-active {
+    background: var(--orange) !important;
+    width: 3rem !important;
+    border-radius: 1rem;
+}
+
+/* --- BOOKING --- */
+.booking-card {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1500');
+    background-size: cover; background-position: center; border-radius: 5rem; padding: 8rem 2rem; text-align: center; color: var(--white);
+}
+.booking-card h2 { font-family: 'Playfair Display', serif; font-size: 4.5rem; margin-bottom: 3rem; }
+
+.input-group {
+    background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);
+    display: inline-flex; flex-wrap: wrap; padding: 1rem; border-radius: 6rem;
+}
+.input-item { display: flex; align-items: center; padding: 0 2rem; border-right: 1px solid rgba(255,255,255,0.3); }
+.input-item i { font-size: 1.6rem; color: var(--accent); }
+.input-item input { background: none; border: none; padding: 1.2rem; color: var(--white); outline: none; font-size: 1.4rem; }
+.btn-book { background: #4e342e; color: var(--white); border: none; padding: 1.5rem 4rem; border-radius: 5rem; cursor: pointer; font-weight: 600; margin-left: 1rem; }
+
+/* --- ABOUT --- */
+.about {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    background: var(--white);
+}
+
+.about .image {
+    flex: 1 1 40rem;
+}
+
+.about .image img {
+    width: 100%;
+    border-radius: 3rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,0.1);
+}
+
+.about .content {
+    flex: 1 1 40rem;
+}
+
+.about .content p {
+    font-size: 1.6rem;
+    color: #666;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+/* --- FOOTER --- */
+.footer {
+    background: var(--dark);
+    padding-top: 5rem;
+}
+
+.footer .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+    padding: 2rem 9%;
+}
+
+.footer .box h3 {
+    font-size: 2.2rem;
+    color: var(--white);
+    padding: 1rem 0;
+}
+
+.footer .box p {
+    font-size: 1.4rem;
+    color: #bbb;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+.footer .box .share a {
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: 50%;
+    font-size: 1.7rem;
+    color: var(--white);
+    background: #333;
+    margin-right: .5rem;
+    text-align: center;
+}
+
+.footer .box .share a:hover {
+    background: var(--orange);
+}
+
+.footer .box .links {
+    display: block;
+    font-size: 1.4rem;
+    color: #bbb;
+    padding: 1rem 0;
+}
+
+.footer .box .links i {
+    color: var(--orange);
+    padding-right: .5rem;
+}
+
+.footer .box .links:hover i {
+    padding-right: 2rem;
+}
+
+.footer .box .links:hover {
+    color: var(--orange);
+}
+
+.footer .credit {
+    text-align: center;
+    margin-top: 5rem;
+    padding: 2.5rem;
+    padding-top: 3rem;
+    font-size: 1.6rem;
+    color: #bbb;
+    border-top: .1rem solid rgba(255,255,255,0.1);
+}
+
+.footer .credit span {
+    color: var(--orange);
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 768px) {
+    .header .navbar { position: absolute; top: 110%; right: 2rem; background: var(--dark); width: 25rem; border-radius: 2rem; display: none; padding: 2rem; }
+    .header .navbar.active { display: block; }
+    .header .navbar a { display: block; margin: 1.5rem 0; font-size: 1.8rem; }
+    .home .content h3 { font-size: 4.5rem; }
+    .input-group { border-radius: 2rem; padding: 2rem; }
+    .input-item { border-right: none; border-bottom: 1px solid #555; width: 100%; margin-bottom: 1rem; }
+    .btn-book { width: 100%; margin-left: 0; }
+    .team-img-container { height: 30rem; }
+}
